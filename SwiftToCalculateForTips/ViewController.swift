@@ -27,6 +27,10 @@ class ViewController: UIViewController {
             
             consumeAddTips.text = "\(Int(numOfconsume * 1.1))"
             
+            tips.isHidden = false
+            
+            consumeAddTips.isHidden = false
+            
         }
         
         
