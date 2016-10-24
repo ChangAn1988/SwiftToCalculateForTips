@@ -9,6 +9,30 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var consume: UITextField!
+    
+    @IBOutlet weak var tips: UITextField!
+    
+    @IBOutlet weak var consumeAddTips: UITextField!
+    
+    @IBAction func calaulateBtn(_ sender: UIButton) {
+        
+        let numOfconsume = Double(consume.text!)!
+        
+        
+        if numOfconsume > 0 {
+            
+            tips.text = "\(Int(numOfconsume * 0.1))"
+            
+            consumeAddTips.text = "\(Int(numOfconsume * 1.1))"
+            
+        }
+        
+        
+    }
+    
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
