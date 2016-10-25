@@ -22,9 +22,9 @@ class ViewController: UIViewController {
     @IBAction func calaulateBtn(_ sender: UIButton) {
         
         
-        if consume.text == "" {
+        if consume.text == "" || Int(consume.text!) == nil {
             
-            noblank.text = "消費金額不可為空白!!"
+            noblank.text = "消費金額不可為空白或非數字的語言!!"
             noblank.isHidden = false
             
         } else {
