@@ -18,21 +18,28 @@ class ViewController: UIViewController {
     
     @IBAction func calaulateBtn(_ sender: UIButton) {
         
-        let numOfconsume = Double(consume.text!)!
         
-        
-        if numOfconsume > 0 {
+        if consume.text == nil || consume.text == "" {
             
-            tips.text = "\(Int(numOfconsume * 0.1))"
+            print("請輸入金額")
             
-            consumeAddTips.text = "\(Int(numOfconsume * 1.1))"
+        } else {
             
-            tips.isHidden = false
+            let numOfconsume = Double(consume.text!)!
             
-            consumeAddTips.isHidden = false
+            if numOfconsume > 0 {
+                
+                tips.text = "\(Int(numOfconsume * 0.1))"
+                
+                consumeAddTips.text = "\(Int(numOfconsume * 1.1))"
+                
+                tips.isHidden = false
+                
+                consumeAddTips.isHidden = false
+                
+            }
             
         }
-        
         
     }
     
