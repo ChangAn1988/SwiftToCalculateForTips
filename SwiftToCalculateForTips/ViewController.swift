@@ -10,6 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
+    @IBOutlet weak var noblank: UILabel!
+    
     @IBOutlet weak var consume: UITextField!
     
     @IBOutlet weak var tips: UITextField!
@@ -19,11 +22,14 @@ class ViewController: UIViewController {
     @IBAction func calaulateBtn(_ sender: UIButton) {
         
         
-        if consume.text == nil || consume.text == "" {
+        if consume.text == "" {
             
-            print("請輸入金額")
+            noblank.text = "消費金額不可為空白!!"
+            noblank.isHidden = false
             
         } else {
+            
+            noblank.isHidden = true
             
             let numOfconsume = Double(consume.text!)!
             
